@@ -1,0 +1,19 @@
+
+.green-btn {
+  width: 300px;
+  background-color: rgba(48, 79, 79, 1);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  margin: 10px;
+  
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
