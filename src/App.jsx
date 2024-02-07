@@ -2,6 +2,9 @@
 import { Route, Routes } from "react-router-dom"
 import { useState, useEffect } from 'react'
 
+// components
+import NavBar from './components/NavBar'
+
 //pages
 import StarshipsCards from "./pages/StarshipsCards/StarshipsCards";
 import StarshipsDetails from "./pages/StarshipsDetails/StarshipsDetails"
@@ -29,6 +32,7 @@ const App = () => {
 
   return ( 
     <main>
+    <NavBar />
     <Routes>
     <Route path='/' element={
       <StarshipsCards starships={starships} />
