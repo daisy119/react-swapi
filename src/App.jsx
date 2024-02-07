@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 
 //pages
 import StarshipsCards from "./pages/StarshipsCards/StarshipsCards";
+import StarshipsDetails from "./pages/StarshipsDetails/StarshipsDetails"
 
 // services
 import *  as swService from './services/sw-api'
@@ -24,12 +25,16 @@ const App = () => {
     fetchStarships()
   },[])
 
+  if(!starships.length) return <h1>Loading…</h1>
+
   return ( 
     <main>
     <Routes>
     <Route path='/' element={
       <StarshipsCards starships={starships} />
       } />
+      <Route path='/starships/:starshipId' element={
+      <StarshipsDetails />} />
     </Routes>
     </main>
   );
